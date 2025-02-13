@@ -1,3 +1,5 @@
+<h1>추적 - 방탈출 웹게임</h1>
+
 ![image](https://github.com/user-attachments/assets/2879c335-2bb5-4312-ab9a-e66d77849640)
 
 - JS, HTML/CSS 활용한 첫 프로젝트
