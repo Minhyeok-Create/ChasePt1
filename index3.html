@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceSection3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZL9Z2ZlMBFJIrV3NFQsRi14GThcl2-eA&callback=myMap" async defer></script>
+    <link rel="stylesheet" href="style3.css">
+</head>
+ 
+<body>
+    <h2> |</h2>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <hr>
+    <div class="infoS3">?</div>
+    <div class="answerArea">
+    <textarea class="memoS3" placeholder="단서를 기록해놓자"></textarea>
+    <input type="text" class="answerS3" id="answerInputS3" placeholder="답안">
+    <button class="submitAnswerS3" id="submitAnswerS3">확인</button>
+    </div>
+    <div class="modalinfoS3" id="modalinfoS3" style="display:none;">
+        <h2>범인의 행적</h2>
+        <img src="img/goToFinal.jpg" alt="wrongAnswerS3" style="width: 100%; max-width: 300px; height:auto;">
+        <p>범인의 이동 경로를 확보했다.
+        <br>꽤나 이곳 저곳 돌아다닌 모양이다.
+        <br>범인이 방문한 장소를 자세히 둘러보자.
+        <br>
+        <br>
+        범인의 행적을 쫓고, 
+        <br>범인의 이름을 밝혀내세요.
+        <br> 
+    </p>
+    <button id="closeinfoS3">닫기</button>
+        </div>
+
+        <div class="section3Modal" id="wrongAnswerS3" style="display:none;">
+            <h2>단서 수집 부족</h2>
+            <img src="img/ExampleS3.jpg" alt="wrongAnswerS3" style="width: 100%; max-width: 300px; height:auto;">
+            <p>놓친게 있던가..? 좀 더 둘러보고 단서를 조합해보자.
+                <br>
+                <br>범인의 행적을 보다 가까이서 관찰하고
+                <br>단서간의 연관성을 찾아보세요.
+            </p>
+            <button id="closewrongAnswerS3">닫기</button>
+        </div>
+        <div class="section3Modal" id="AnswerS3" style="display:none;">
+            <h2>신상 확보 완료</h2>
+            <img src="img/locateSuccess.jpg" alt="AnswerS3" style="width: 100%; max-width: 300px; height:auto;">
+            <p>용의자 '문지상'의 신상을 확보했다.
+                <br>
+                <br>문지상을 목격했다는 익명의 제보가 들어왔다.
+                <br>현재 서울 소재의 xx호텔에 위치한 것으로 판단된다.
+                <br>시간이 없다 어서가서 그 놈이 죗값을 치르게 하자.
+            </p>
+            <button id="goSection4">다음</button>
+        </div>
+        <audio src="sounds/click.mp3" id="clickSound" preload="auto"></audio>
+        <audio src="sounds/hover.mp3" id="hoverSound" preload="auto"></audio> 
+        <audio src="sounds/wrong.mp3" id="wrongSound" preload="auto"></audio> 
+        <audio src="sounds/correct.mp3" id="correctSound" preload="auto"></audio>    
+        
+        <script src = "script3.js"></script>
+</body>
+
+
+
+
+</html>

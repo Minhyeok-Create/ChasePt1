@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TraceMain</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- CSS 링크 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="goHome">
+        <button id="homeButton">처음으로</button>
+    </div>
+    <div class="header">
+        <!-- 제목 -->
+        <h1 id="title">추적</h1>
+        <!-- 부제목 -->
+        <h2 id="subtitle">미술관 살인사건</h2>
+    </div>
+
+    <!-- 메인 화면 -->
+    <div class="Main">
+        <!-- 배경 이미지 -->
+        <img id="mainSearch" src="img/selectList.jpg" alt="">
+        <!-- 메인 선택 리스트 -->
+        <ul id="mainSelect">
+            <li id="start">시작하기</li>
+            <li id="goQuestion">문의하기</li>
+            <li id="help">도움말</li>
+        </ul>
+    </div>
+
+    <!-- 프롤로그 화면 -->
+    <div class="First" style="display: none;">
+        <h1 id="prolog">프롤로그</h1>
+        <div id="prologTextBox">
+            <p id="FirstContent">2021년 5월 26일 16시 43분 xx시에 위치한 oo미술관에서 한 창민(7)군이 사망한 사건이 발생했다. 사인은 과다출혈, 손목이 그어졌고 전시 시설 내부의 의자에 앉아있는 상태로 발견되었다..</p>
+            <p id="SecondContent" style="display:none;">피해자는 고작 7세..<br>과연 본인의 손목을 긋는게 가능했을까..? <br>혈흔의 모양이 비산 혈흔이다. 보통 공격성이 강한 행동을 당할때 나오는 모양이다. <br>단순 자살일 리가 없다. <br>근데 왜 미술관에서 이런 일을 벌였을까..</p>
+            <p id="ThirdContent" style="display:none;">일단 범행 장소로 가서 <span style="color: red;">단서</span>를 찾아보자</p>
+            <button id="prologNext">다음</button>
+            <!-- 다음 SECTION으로 -->
+            <button id="goSection2" style="display: none;">진행</button>
+        </div>
+    </div>
+
+    <!-- 문의하기 화면 -->
+    <div class="Question" style='display:none;'>
+        <h2>문의하기</h2>
+        <form id="questionForm">
+            <textarea id="questionInput" placeholder="여기에 내용을 입력하세요" rows="4" required></textarea>
+            <h2>식별번호</h2>
+            <input type="password" id="passwordInput" placeholder="식별번호 입력 (숫자 6자리)" maxlength="6" required>
+            <button type="submit">등록하기</button>
+        </form>
+        <div id="questionList">
+            <h2>문의목록</h2>
+            <ol id="questions"></ol>
+        </div>
+    </div>
+
+    <!-- 비밀번호 입력 모달 -->
+    <div id="passwordCheckModal" style="display:none;">
+        <input type="password" id="checkPassword" placeholder="식별번호 입력 (숫자 6자리)" maxlength="6" required>
+        <button id="checkButton">조회</button>
+        <button id="cancelButton">취소</button>
+    </div>
+
+    <!-- 도움말 모달 -->
+    <div id="helpModal" style="display:none;">
+        <div class="helpContent">
+            <h2>도움말</h2>
+            <p>시작하기를 클릭하여 사건 조사를 진행하고 <br>범인을 검거하세요.</p>
+            <button id="closeHelp">닫기</button>
+        </div>
+    </div>
+
+    <!-- 문의 내용 모달 -->
+    <div id="questionContentModal" style="display:none;">
+        <div class="modal-content">
+            <h2>문의 내용</h2>
+            <p id="modalQuestionContent"></p>
+            <button id="closeModal">닫기</button>
+        </div>
+    </div>
+
+  
+
+   <!-- 효과음 리스트 -->
+   <audio src="sounds/click.mp3" id="clickSound" preload="auto"></audio>
+   <audio src="sounds/hover.mp3" id="hoverSound" preload="auto"></audio>
+   <audio src="sounds/ending.mp3" id="startSound" preload="auto"></audio>
+
+   <!-- JavaScript 링크 -->
+   <script src="script.js"></script>
+</body>
+
+</html>

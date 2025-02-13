@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceSection2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div>
+        <div class="section2Main">
+            <!--div 숨김박스 영역-->
+            <div class="click1"></div>
+            <div class="click2"></div>
+            <div class="click3"></div>
+            <div class="click4"></div>
+            <div class="click5"></div>
+            <div class="click6"></div>
+            <div class="click7"></div>
+            <div class="info">?</div>
+        </div>
+
+        <!--메모 영역-->
+        <textarea class="memo" placeholder="단서를 기록해놓자"></textarea>
+
+        <!--답안 영역-->
+        <div class="answerArea">
+            <input type="text" class="answer" id="answerInput" placeholder="답안">
+            <button class="submitAnswer" id="submitAnswer">확인</button>
+        </div>
+
+        <!--click->Modal open 영역-->
+        <div class="section2Modal" id="c1" style="display:none;">
+            <h2>the pictUre</h2>
+            <img src="img/thePicture.jpg" alt="thePicture"
+                style="width: 80%; max-width: 250px; max-height:300px; height:auto;">
+            <p>우울한 느낌이 드는 그림</p>
+            <button id="closeClick1">닫기</button>
+        </div>
+        <div class="section2Modal" id="c2" style="display:none;">
+            <h2>thE minD</h2>
+            <img src="img/c2IMG.jpg" alt="Mindpicture"
+                style="width: 100%; max-width: 300px;   max-height:300px; height:auto;">
+            <p>기괴하게 생긴 그림이다.</p>
+            <button id="closeClick2">닫기</button>
+        </div>
+        <div class="section2Modal" id="c3" style="display:none;">
+            <h2>Blackboard</h2>
+            <img src="img/blackBoard.jpg" alt="Blackboard" style="width: 100%; max-width: 300px; height:auto;">
+            <p>먼지 쌓인 칠판</p>
+            <button id="closeClick3">닫기</button>
+        </div>
+        <div class="section2Modal" id="c4" style="display:none;">
+            <h2>insidE</h2>
+            <img src="img/drawing.jpg" alt="drawing"
+                style="width: 100%; max-width: 300px; max-height:300px; height:auto">
+            <p>뭔가 깊이 빠져드는 지문같이 생긴 얼굴그림</p>
+            <button id="closeClick4">닫기</button>
+        </div>
+        <div class="section2Modal" id="c5" style="display:none;">
+            <h2>beat uP-chair</h2>
+            <img src="img/Chair.jpg" alt="theChair" style="width: 100%; max-width: 300px; height:auto;">
+            <p>등받이에 시시한 그림이 붙어있다.</p>
+            <button id="closeClick5">닫기</button>
+        </div>
+        <div class="section2Modal" id="c6" style="display:none;">
+            <h2>cigarette lightEr</h2>
+            <img src="img/lighter.jpg" alt="lighter" style="width: 110%; max-width: 300px; height:auto;">
+            <p>깊은 스크래치가 잔뜩 나 있다.</p>
+            <button id="closeClick6">닫기</button>
+        </div>
+        <div class="section2Modal" id="c7" style="display:none;">
+            <h2>sandgLass</h2>
+            <img src="img/sandglass.jpg" alt="sandglass"
+                style="width: 100%; max-width: 300px; max-height:300px; height:auto;">
+            <p>빛을 비췄을때 파란 빛깔이 돈다.</p>
+            <button id="closeClick7">닫기</button>
+        </div>
+        <div class="section2Modal" id="wrongAnswer" style="display:none;">
+            <h2>단서 수집 부족</h2>
+            <img src="img/wrongAnswer.jpg" alt="wrongAnswer" style="width: 100%; max-width: 300px; height:auto;">
+            <p>놓친게 있던가..? 좀 더 둘러보고 단서를 조합해보자.</p>
+            <button id="closewrongAnswer">닫기</button>
+        </div>
+
+        <!--정답 모달-->
+        <div class="section2Modal" id="Answer" style="display:none;">
+            <h2>Deepblue</h2>
+            <img src="img/wrongAnswer.jpg" alt="wrongAnswer" style="width: 100%; max-width: 300px; height:auto;">
+            <p>단서를 충분히 확인한 것 같다.
+                <br>그나저나 이 그림들은 원래 여기에 있던 그림들일까?
+                <br>
+                <br>지금쯤이면 범인의 이동경로를 확보했을 거야.
+                <br>부지런하게 움직여보자구.
+            </p>
+            <button id="nextAnswer">다음</button>
+        </div>
+
+        <!--정답 이후 진행 모달-->
+        <div class="section2Modal" id="goSection3" style="display:none;">
+            <h2>이동경로 추적</h2>     
+            <img src="img/go2Section.jpg" alt="wrongAnswer" style="width: 100%; max-width: 300px; height:auto;">       
+            <p>범인의 이동경로를 확보했습니다.
+            <br>동선을 추적하며 단서를 수집하세요
+            </p>
+            <button id="goSection3Button">진행</button>
+        </div>
+
+        <!--info 모달-->
+        <div class="section2Modal" id="modalinfo" style="display:none;">
+            <h2>전시1관 특별전:앤티크</h2>
+            <p>사건이 발생한 전시1관 내부이다.
+            <br>전체적으로 낡고 어질러진 모습이다.
+            <br>분명 단서가 있을거다. 전시관 내부를 둘러보자.
+            <br>
+            <br>
+            전시관 내부를 조사하고 단서를 수집하여
+            <br> 암호를 입력하세요.
+            </p>
+            <button id="closeinfo">닫기</button>
+        </div>
+        
+        <div class="click2Modal" style="display:none;"></div>
+        <div class="click3Modal" style="display:none;"></div>
+        <div class="click4Modal" style="display:none;"></div>
+        <div class="click5Modal" style="display:none;"></div>
+        <div class="click6Modal" style="display:none;"></div>
+        <div class="click7Modal" style="display:none;"></div>
+        <div class="infoModal" style="display:none;"></div>
+    </div>
+
+    <!--효과음 리스트-->
+    <audio src="sounds/click.mp3" id="clickSound" preload="auto"></audio>
+    <audio src="sounds/hover.mp3" id="hoverSound" preload="auto"></audio> 
+    <audio src="sounds/wrong.mp3" id="wrongSound" preload="auto"></audio> 
+    <audio src="sounds/correct.mp3" id="correctSound" preload="auto"></audio> 
+
+    <script src="script2.js"></script>
+</body>
+
+
+
+</html>

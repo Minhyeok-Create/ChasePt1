@@ -1,0 +1,199 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    position: absolute;
+    color: white;
+    z-index: 5;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section2Main {
+    position: relative;
+    height: 800px;
+    width: 1200px;
+    margin: 0 auto;
+    background-image: url(img/Section2Main.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section2Main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(img/FirstMain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.click1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 250px;
+    top: 100px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 250px;
+    top: 300px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click3 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    right: 580px;
+    top: 250px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click3 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    right: 580px;
+    top: 250px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 650px;
+    top: 450px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click5 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 900px;
+    top: 450px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click6 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 80px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.click7 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 150px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.info {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -130px;
+    top: 50px;
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #252424, #999);
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: #666;
+}
+
+.memo {
+    width: 80%;
+    height: 80px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.answerArea {
+    position: absolute;
+    display: flex;
+    bottom: 60px;
+    right: 100px;
+    align-items: center;
+}
+
+.submitAnswer:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.info:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.section2Modal {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 60%;
+    max-width: 400px;
+    max-height: 80%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.section2Modal h2 {
+    margin: 0 0 10px;
+}
+
+.section2Modal p {
+    margin: 10px 0;
+}
+

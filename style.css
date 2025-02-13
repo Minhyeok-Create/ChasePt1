@@ -1,0 +1,388 @@
+@font-face {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'establishThornFontOTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishThornFontOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mingijuk';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Mingijuk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*MainDisplay*/
+
+.header {
+    position: fixed;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 중앙 정렬 */
+    text-align: center;
+    z-index: 1000;
+    /* 제목이 다른 요소 위에 표시되도록 */
+}
+
+#title {
+    font-family: 'establishThornFontOTF', sans-serif;
+    font-size: 8em;
+    margin: 0;
+    color: white;
+    text-shadow: 0 4px 15px red;
+}
+
+#subtitle {
+    font-family: 'OG_Renaissance_Secret-Rg', sans-serif;
+    font-size: 2em;
+    margin: -10px 0 0 0;
+    color: white;
+    text-shadow: 0 4px 15px #464cad;
+    top: -70px;
+}
+
+
+.Main {
+    height: 100vh;
+    width: 100vw;
+    background: url("img/Main.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainSelect {
+    display: none;
+    text-decoration: none;
+    list-style: none;
+    width: 35%;
+    height: auto;
+    position: absolute;
+    flex-direction: column;
+    top: 40%;
+    align-items: center;
+    display: flex;
+}
+
+#mainSelect li {
+    margin: 20px 0;
+    width: 100%;
+    height: 60px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #4a5c67, #6c7a8b, #1f2a3b);
+    outline: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+
+#mainSelect li:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+#mainSearch {
+    margin: 0;
+    width: auto;
+    height: 80px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+    object-fit: contain;
+    cursor: pointer;
+}
+
+#mainSearch:hover {
+    opacity: 0.7;
+}
+
+@media (min-width: 769px) {
+    .header {
+        top: 10%;
+    }
+
+    #title {
+        font-size: 6em;
+    }
+
+    #subtitle {
+        font-size: 3em;
+    }
+
+    #mainSelect {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 40%;
+        top: 60%;
+        flex-direction: row;
+
+    }
+
+    #mainSelect li {
+        margin: 10px;
+        flex: 1 1 200px;
+        max-width: 300px;
+    }
+}
+
+/*MainDisplay End*/
+
+/*Start FirstScene*/
+.First {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background: url("img/FirstMain.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prologTextBox {
+    outline: 3px solid white;
+    background: linear-gradient(45deg, #2b2c3f, #000000);
+    border-radius: 30px;
+    min-width: 80%;
+    min-height: 60%;
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'Mingijuk', sans-serif;
+}
+
+#prolog {
+    position: absolute;
+    display: flex;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#prologTextBox p {
+    color: white;
+    font-size: 1.3em;
+}
+
+#prologNext {
+    position: absolute;
+    right: 25%;
+    bottom: 10%;
+    display: none;
+    width: 11%;
+    height: auto;
+    background: linear-gradient(45deg, #2c353f, #4a5c67, #354952);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+}
+
+#prologNext:hover {
+    opacity: 0.7;
+}
+
+#goSection2 {
+    z-index: 1000;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    display: none;
+    width: 11%;
+    height: auto;
+    background: linear-gradient(45deg, #2c353f, #4a5c67, #354952);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+}
+
+#goSection2:hover {
+    opacity: 0.7;
+
+}
+
+#questionForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#questionInput {
+    width: 500px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#questionForm button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #2c353f, #4a5c67, #354952);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+#questionForm button:hover {
+    opacity: 0.8;
+}
+
+.Question {
+    height: 100vh;
+    width: 100vw;
+    background: url("img/qMark.jpg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.7),
+        -2px -2px 0 rgba(0, 0, 0, 0.7),
+        2px -2px 0 rgba(0, 0, 0, 0.7),
+        -2px 2px 0 rgba(0, 0, 0, 0.7);
+}
+
+.Question h2 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+
+}
+
+#passwordCheckModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#questions {
+    padding: 0;
+}
+
+.goHome {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    z-index: 1000;
+}
+
+#homeButton {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #2c353f, #4a5c67, #354952);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#homeButton:hover {
+    opacity: 0.7;
+}
+
+.question-item {
+    cursor: pointer;
+}
+
+#helpModal {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.helpContent h2 {
+    margin: 0 0 10px;
+}
+
+.helpContent p {
+    margin: 10px 0;
+}
+
+#questionContentModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#questionContentModal h2 {
+    margin-bottom: 20px;
+}
+
+#closeModal {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #2c353f, #4a5c67, #354952);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeModal:hover {
+    opacity: 0.7;
+}

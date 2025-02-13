@@ -1,0 +1,102 @@
+.modalinfoS3 {
+    display: none; /* 초기에는 숨김 */
+            position: fixed; /* 화면 중앙에 위치하게 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 중앙 정렬 */
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 100; /* 구글 맵 위에 표시되게 */
+    }
+
+    .section3Modal {
+    display: none; /* 초기에는 숨김 */
+            position: fixed; /* 화면 중앙에 위치하게 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 중앙 정렬 */
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 100; /* 구글 맵 위에 표시되게 */
+    }
+
+ #googleMap::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    /* 상단에 맞추기 */
+    left: 0;
+    /* 좌측에 맞추기 */
+    height: 100%;
+    /* 부모 요소의 높이에 맞추기 */
+    width: 100%;
+    /* 부모 요소의 너비에 맞추기 */
+    background-image: url(img/FirstMain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* 이미지를 부모 요소에 맞게 조정 */
+    z-index: -3;
+    /* 배경으로 설정 */
+}
+.infoS3 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px; /* 값을 조정하여 화면 내에 위치하도록 */
+    top: 20px;
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #252424, #999);
+    box-shadow: 0 4px 15px rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2em;
+    text-shadow: #666;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+}
+.infoS3:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    .memoS3 {
+        width: 80%;
+        /* 너비 설정 */
+        height: 80px;
+        /* 높이 설정 */
+        margin: 20px auto;
+        /* 중앙 정렬 */
+        padding: 10px;
+        /* 안쪽 여백 */
+        border: 1px solid #ccc;
+        /* 테두리 */
+        border-radius: 5px;
+        /* 둥근 모서리 */
+        font-size: 16px;
+        /* 글자 크기 */
+        resize: none;
+        /* 크기 조절 비활성화 */
+    }
+
+    .answerAreaS3 {
+        position: absolute;
+        display: flex;
+        bottom: 60px;
+        right: 100px;
+        align-items: center;
+    }
+
+    .submitAnswerS3:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+

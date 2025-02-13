@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Mingijuk';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Mingijuk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        /* Flexbox로 중앙 정렬 */
+        justify-content: center;
+        /* 수평 중앙 정렬 */
+        align-items: center;
+        /* 수직 중앙 정렬 */
+    }
+
+    .section4Main {
+        position: relative;
+        height: 800px;
+        /* 고정된 높이 */
+        width: 1200px;
+        /* 고정된 너비 */
+        margin: 0 auto;
+        /* 화면 가운데 정렬 */
+        background-image: url(img/doorLock.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* 이미지 크기 고정 */
+    }
+
+    .handdle {
+        position: relative;
+        height: 280px;
+        /* 고정된 높이 */
+        width: 700px;
+        /* 고정된 너비 */
+        left: 170px;
+        top: 490px;
+        /* 화면 가운데 정렬 */
+        background-image: url(img/hanndle.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        transform-origin: 15% 50%;
+        transition: transform 1s ease;
+    }
+
+    .section4Main::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        /* 상단에 맞추기 */
+        left: 0;
+        /* 좌측에 맞추기 */
+        height: 100%;
+        /* 부모 요소의 높이에 맞추기 */
+        width: 100%;
+        /* 부모 요소의 너비에 맞추기 */
+        background-image: url(img/FirstMain.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /* 이미지를 부모 요소에 맞게 조정 */
+        z-index: -1;
+        /* 배경으로 설정 */
+    }
+
+
+
+
+    #T1 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 70px;
+        /* 고정된 픽셀 위치 */
+        top: 100px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T2 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 240px;
+        /* 고정된 픽셀 위치 */
+        top: 100px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T3 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 410px;
+        /* 고정된 픽셀 위치 */
+        top: 100px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T4 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 70px;
+        /* 고정된 픽셀 위치 */
+        top: 250px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T5 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 240px;
+        /* 고정된 픽셀 위치 */
+        top: 250px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T6 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 410px;
+        /* 고정된 픽셀 위치 */
+        top: 250px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T7 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 410px;
+        /* 고정된 픽셀 위치 */
+        top: 400px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T8 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 240px;
+        /* 고정된 픽셀 위치 */
+        top: 400px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    #T9 {
+        position: absolute;
+        width: 100px;
+        /* 고정된 너비 */
+        height: 100px;
+        /* 고정된 높이 */
+        left: 70px;
+        /* 고정된 픽셀 위치 */
+        top: 400px;
+        /* 고정된 픽셀 위치 */
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+    }
+
+    .Toggle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        z-index: 10;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .Toggle.active {
+        background-color: rgba(243, 250, 253, 0.3);
+        /* 반투명 배경 추가 */
+    }
+
+    .endingModal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        /* 초기 위치를 아래로 설정 */
+        width: 100%;
+        height: 60%;
+        max-width: 400px;
+        max-height: 80%;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.5s ease;
+        /* 애니메이션 효과 추가 */
+    }
+
+    .endingModal.show {
+        transform: translate(-50%, -50%);
+        /* 중앙으로 이동 */
+    }
+
+
+
+    .modalContent {     
+        transform: translateY(100%);
+        /* 아래에서 시작 */
+        transition: transform 30s ease;
+        /* 애니메이션 효과 */
+    }
+
+    .modalContent p{
+        font-family: 'Mingijuk', sans-serif;
+        font-size: 1.3em;
+    }
+
+    .modalContent.show {
+        transform: translateY(-80%);
+        /* 최종 위치로 이동 */
+    }
+
+    .unLockModal {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 60%;
+        /* 원하는 크기로 조정 */
+        max-width: 400px;
+        /* 최대 너비 */
+        max-height: 80%;
+        /* 최대 높이 */
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        /* 다른 요소 위에 표시 */
+        padding: 20px;
+        text-align: center;
+    }
+
+    #randomMessage {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Mingijuk', sans-serif;
+    font-size: 3em;
+    color: white;
+    display: none;
+    z-index: 1000;
+}

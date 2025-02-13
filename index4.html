@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceSection4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <div>
+        <div class="section4Main">
+            <div class="handdle" id="clickHandle"></div>
+            <div class="Toggle" id="T1"></div>
+            <div class="Toggle" id="T2"></div>
+            <div class="Toggle" id="T3"></div>
+            <div class="Toggle" id="T4"></div>
+            <div class="Toggle" id="T5"></div>
+            <div class="Toggle" id="T6"></div>
+            <div class="Toggle" id="T7"></div>
+            <div class="Toggle" id="T8"></div>
+            <div class="Toggle" id="T9"></div>
+        </div>
+        <div class="unLockModal" id="unLockModal" style="display:none;">
+            <img src="img/goToDeepBlue.jpg" alt="success"
+                style="width: 100%; max-width: 300px; max-height: 400px;height:auto;">
+
+            <button id="goToEndingCredit">진행</button>
+        </div>
+        <div id="randomMessage"></div>
+
+        <div class="endingModal" id="endingModal" style="display:none;">
+            <div class="modalContent">
+                <h2>엔딩 : 검거완료?</h2>
+                <p><br><br><br><br><br><br>결국 문지상을 검거했다.
+                <p><br><br><br><br><br><br>악마 같은 이 녀석에게 하고싶은 말이 많았지만..<br><br><br><br><br><br>
+                <p><br><br><br><br><br><br>할 수 없었다.<br><br><br><br><br><br><br><br><br><br><br><br>
+                <p><br><br><br><br><br><br>문지상은 한창민 군과 같은 모습으로 사망한 상태였다.<br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
+                    이런 쓰레기 같은..<br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br>
+                    문지상이 앉아있던 의자 밑에 종이 한 장이 눈에 들어왔다.<br><br><br><br>
+                    <br><br><br><br><br><br>
+                    <img src="img/MemoEdit.png" alt="success"
+                        style="width: 100%; max-width: 300px; max-height: 400px;height:auto;">
+                    <br>챕터2에 이어서..
+                </p>
+                <button id="goToFirst">처음으로</button>
+            </div>
+        </div>
+        <audio id="handleSound" src="sounds/Success.mp3" preload="auto"></audio>
+        <audio id="handleFail" src="sounds/Fail.mp3" preload="auto"></audio>
+        <audio id="endingSound" src="sounds/ending.mp3" preload="auto"></audio>
+    </div>
+    <script src="script4.js"></script>
+</body>
+
+</html>
